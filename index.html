@@ -46,10 +46,6 @@
             position: relative;
             cursor: pointer;
         }
-        .mosaic-card:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0);
-        }
         .mosaic-card img {
             width: 100%;
             height: 200px;
@@ -76,10 +72,7 @@
             color: white;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .mosaic-card a:hover {
-            background-color: #218838;
+            /* transition: background-color 0.3s ease; */
         }
         footer {
             text-align: center;
@@ -89,31 +82,6 @@
             margin-top: 20px;
             font-size: 14px;
         }
-
-        /* New Hover Overlay */
-        .mosaic-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .mosaic-card:hover::before {
-            opacity: 1;
-        }
-        /* New Image Hover Animation */
-        .mosaic-card:hover img {
-            opacity: 0.7;
-        }
-        /* Hover effect on title */
-        .mosaic-card:hover h3 {
-            color: #28a745;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
