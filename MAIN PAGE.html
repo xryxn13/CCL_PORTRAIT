@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portrait Making by CCL IIT Gandhinagar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: lightblue;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .mosaic-card {
+            background-color: white;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            cursor: pointer;
+        }
+        .mosaic-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0);
+        }
+        .mosaic-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+        .mosaic-card h3 {
+            margin: 10px 0;
+            font-size: 24px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        .mosaic-card p {
+            padding: 0 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        .mosaic-card a {
+            display: inline-block;
+            margin: 15px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .mosaic-card a:hover {
+            background-color: #218838;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: lightblue;
+            color: black;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        /* New Hover Overlay */
+        .mosaic-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .mosaic-card:hover::before {
+            opacity: 1;
+        }
+        /* New Image Hover Animation */
+        .mosaic-card:hover img {
+            opacity: 0.7;
+        }
+        /* Hover effect on title */
+        .mosaic-card:hover h3 {
+            color: #28a745;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .mosaic-card {
+                width: 90%;
+                margin: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Portrait Making by CCL IIT Gandhinagar</h1>
+</header>
+
+<div class="container">
+    <div class="mosaic-card">
+        <img src="dice_output.png" alt="Dice Portrait">
+        <h3>Dice Portrait</h3>
+        <p>Create a portrait using dice face patterns based on grayscale values.</p>
+        <a href="DICE_PORTRAIT.html">Create Now</a>
+    </div>
+
+    <div class="mosaic-card">
+        <img src="stickynotes.png" alt="Sticky Note Portrait">
+        <h3>Sticky Note Portrait</h3>
+        <p>Create a colorful sticky note mosaic using pixel data.</p>
+        <a href="STICKY_NOTE_PORTRAIT.html">Create Now</a>
+    </div>
+
+    <div class="mosaic-card">
+        <img src="bindiart.png" alt="Bindi Portrait">
+        <h3>Bindi Portrait</h3>
+        <p>Generate a portrait using vibrant bindi patterns.</p>
+        <a href="BINDI_PORTRAIT.html">Create Now</a>
+    </div>
+
+    <div class="mosaic-card">
+        <img src="pushpin.png" alt="Pushpin Portrait">
+        <h3>Pushpin Portrait</h3>
+        <p>Create a unique pushpin portrait using grayscale pixel data.</p>
+        <a href="PUSHPIN_PORTRAIT.html">Create Now</a>
+    </div>
+
+    <div class="mosaic-card">
+        <img src="origami.png" alt="Origami Portrait">
+        <h3>Origami Portrait</h3>
+        <p>Design a portrait using artistic origami shapes.</p>
+        <a href="ORIGAMI_PORTRAIT.html">Create Now</a>
+    </div>
+
+    <div class="mosaic-card">
+        <img src="kepler.png" alt="Kepler Portrait">
+        <h3>Kepler Portrait</h3>
+        <p>Generate a portrait using the geometrical beauty of Kepler shapes.</p>
+        <a href="KEPLER_PORTRAIT.html">Create Now</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Portrait Making by CCL IIT Gandhinagar. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
